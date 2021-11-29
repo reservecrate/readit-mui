@@ -6,7 +6,7 @@ const styles: SxProps = {
 };
 
 const Utilities = () => {
-    const utilitiesArr = [
+    const utilities = [
         'share',
         'save',
         'hide',
@@ -17,7 +17,7 @@ const Utilities = () => {
     return (
         <Stack direction='row' alignItems='center'>
             <Typography variant='body2'>69 comments</Typography>
-            {utilitiesArr.map(utility => (
+            {utilities.map(utility => (
                 <Typography variant='body2' color='text.secondary' sx={styles}>
                     {utility}
                 </Typography>

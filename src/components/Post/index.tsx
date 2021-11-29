@@ -1,4 +1,4 @@
-import { Grid, Card, Stack } from '@mui/material';
+import { Grid, Card, CardActionArea, Stack } from '@mui/material';
 import Score from './Score';
 import Thumbnail from './Thumbnail';
 import Details from './Details';
@@ -17,13 +17,15 @@ const Post = ({ post }: { post: IPost }) => {
     return (
         <Grid item>
             <Card>
-                <Stack direction='row' alignItems='center'>
-                    <Score score={score} />
-                    <Thumbnail />
-                    <Details
-                        details={{title, content, flair, author, domain}}
-                    />
-                </Stack>
+                <CardActionArea>
+                    <Stack direction='row' alignItems='center'>
+                        <Score score={score} />
+                        <Thumbnail />
+                        <Details
+                            details={{ title, content, flair, author, domain }}
+                        />
+                    </Stack>
+                </CardActionArea>
             </Card>
         </Grid>
     );

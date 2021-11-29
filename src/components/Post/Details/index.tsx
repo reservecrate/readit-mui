@@ -4,20 +4,19 @@ import DetailsBottom from './DetailsBottom';
 import Utilities from './Utilities';
 
 interface IDetails {
-    details: {
-        title: string;
-        content: string;
-        flair: string;
-        author: string;
-        domain: string;
-    };
+    title: string;
+    content: string;
+    flair: string;
+    author: string;
+    domain: string;
 }
 
-const Details = ({ details }: IDetails) => {
+const Details = ({ details }: { details: IDetails }) => {
+    const { title, content, flair, author, domain } = details;
     return (
         <Stack sx={{ ml: '.5em' }}>
-            <DetailsTop />
-            <DetailsBottom />
+            <DetailsTop detailsTop={{ flair, title, domain }} />
+            <DetailsBottom detailsBottom={{ author }} />
             <Utilities />
         </Stack>
     );

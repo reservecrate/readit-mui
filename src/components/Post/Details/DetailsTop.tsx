@@ -3,22 +3,23 @@ import { Stack, Chip, Typography, Link } from '@mui/material';
 interface IDetailsTop {
     flair: string;
     title: string;
-    domainSrc: string;
+    domain: string;
 }
 
-const DetailsTop = () => {
+const DetailsTop = ({ detailsTop }: { detailsTop: IDetailsTop }) => {
+    const { flair, title, domain } = detailsTop;
     return (
         <Stack direction='row' alignItems='center'>
-            <Chip label='Discussion' />
+            <Chip label={flair} />
             <Typography variant='h6' sx={{ ml: '.25em' }}>
-                Hello there
+                {title}
             </Typography>
             <Link
                 href='old.reddit.com'
                 underline='hover'
                 sx={{ ml: '.25em', fontSize: '.75rem' }}
             >
-                (self.apexlegends)
+                ({domain})
             </Link>
         </Stack>
     );
