@@ -1,9 +1,10 @@
+import { Grid } from "@mui/material"
 
 const MainContent = () => {
     return (
-        <div>
+        <Grid container>
             
-        </div>
+        </Grid>
     )
 }
 

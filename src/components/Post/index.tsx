@@ -14,6 +14,12 @@ interface IPost {
 
 const Post = ({ post }: { post: IPost }) => {
     const { title, content, flair, author, domain, score } = post;
+    // const handleMouseOver = (
+    //     e: React.MouseEvent<HTMLDivElement, MouseEvent>
+    // ) => {
+    //     console.log('gt');
+    //     e.target.
+    // };
     return (
         <Grid item>
             <Card>
